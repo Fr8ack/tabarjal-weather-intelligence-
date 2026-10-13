@@ -1,0 +1,48 @@
+/* Aurora 3.2 Saudi prayer dashboard */
+.prayer-section{position:relative;overflow:hidden;scroll-margin-top:90px;background:radial-gradient(ellipse at 10% 0,rgba(49,195,166,.15),transparent 40%),var(--panel);border-color:rgba(84,216,194,.32)}
+.prayer-section h2{margin:0;font-size:clamp(20px,2.3vw,27px)}
+.prayer-intro{display:flex;flex-wrap:wrap;gap:9px;align-items:center;justify-content:space-between;margin-bottom:17px}
+.prayer-intro>div{display:grid;gap:3px}.prayer-intro small{color:var(--muted);font-size:12px}
+.prayer-location-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) auto;gap:9px;align-items:end;margin:13px 0}
+.prayer-location-controls label,.prayer-method-control label{display:grid;gap:5px;font-size:12px;color:var(--muted);font-weight:650}
+.prayer-location-controls select,.prayer-method-control select{width:100%;min-width:0;height:47px;background:var(--bg);border:1px solid var(--line);color:var(--fg);font-size:14px}
+.prayer-location-controls button{height:47px;white-space:nowrap}
+.prayer-search{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0 6px}
+.prayer-search input{flex:1;min-width:165px;min-height:45px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg);padding:9px 12px;font:inherit;font-size:13px}
+.prayer-search input::placeholder{color:var(--muted)}
+.prayer-search button{min-height:45px}
+.prayer-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:6px;margin-bottom:8px}
+.prayer-results .prayer-search-item{font-size:12px;padding:8px 10px;min-height:41px}
+.prayer-location-note{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0 3px;font-size:13px;color:var(--muted)}
+#prayerLocation{color:var(--fg);font-size:16px}#prayerCoordinates{font-variant-numeric:tabular-nums;font-size:11px}
+.prayer-status{border:1px solid var(--line);border-radius:11px;padding:10px 13px;margin:10px 0 17px;font-size:12px;line-height:1.6;color:var(--muted);background:rgba(100,160,190,.07)}
+.prayer-status[data-state=ok]{border-color:rgba(82,209,153,.38)}.prayer-status[data-state=warn],.prayer-status[data-state=error]{border-color:rgba(240,166,75,.55);background:rgba(240,166,75,.08)}
+.prayer-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.prayer-next-card{background:linear-gradient(140deg,rgba(35,148,144,.17),rgba(55,129,176,.07));border:1px solid rgba(85,208,190,.3);border-radius:17px;padding:18px;min-width:0;display:grid;gap:8px}
+.prayer-next-card.prayer-iqama{background:linear-gradient(140deg,rgba(65,132,193,.16),rgba(115,83,169,.08))}
+.prayer-next-card>small{font-size:12px;color:var(--muted)}
+.prayer-next-card .prayer-name{font-size:21px;color:var(--fg)}
+.prayer-next-card .prayer-counter{font:800 clamp(24px,3.8vw,42px)/1.2 system-ui,sans-serif;letter-spacing:1px;color:#67ebc6;direction:ltr;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.prayer-next-card.prayer-iqama .prayer-counter{color:#a8d9ff}
+.prayer-next-card .prayer-at{font-size:12px;color:var(--muted)}
+.prayer-times-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:14px 0}
+.prayer-tile{text-align:center;border:1px solid var(--line);border-radius:13px;background:rgba(131,184,190,.06);padding:14px 6px;display:flex;flex-direction:column;gap:5px;align-items:center;min-width:0}
+.prayer-tile-icon{font-size:24px}.prayer-tile b{font-size:13px}.prayer-tile strong{font-size:15px;color:var(--fg);white-space:nowrap}
+.prayer-tile small{font-size:10px;line-height:1.65;color:var(--muted)}.prayer-tile.prayer-near{border-color:#42c8b6;background:rgba(66,200,182,.12)}
+.prayer-sun-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:10px 0}
+.prayer-sun-row>div{display:flex;gap:8px;justify-content:space-between;align-items:center;border:1px solid var(--line);background:rgba(135,175,200,.06);border-radius:12px;padding:11px 15px;font-size:12px}
+.prayer-sun-row b{font-size:15px;color:var(--fg)}
+.prayer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:9px;align-items:center;margin:12px 0}
+.prayer-bottom .prayer-method-control{min-width:min(100%,255px)}
+.prayer-actions{display:flex;gap:8px;flex-wrap:wrap}.prayer-actions button{font-size:12px}
+.prayer-settings{border:1px solid var(--line);background:rgba(122,179,197,.05);padding:14px;border-radius:13px;margin:12px 0}
+.prayer-settings p{font-size:12px;color:var(--muted)}
+.prayer-offset-fields{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
+.prayer-offset-fields label{font-size:11px;display:grid;gap:5px;color:var(--muted)}
+.prayer-offset-fields input{width:100%;max-width:100%;min-width:0;border:1px solid var(--line);border-radius:8px;padding:8px;background:var(--bg);color:var(--fg);font:inherit;font-size:14px}
+.prayer-footer-note{font-size:12px;line-height:1.9;color:var(--muted);margin:12px 0 0}
+.trust-links .qibla-shortcut,.trust-links .prayer-shortcut{grid-column:auto}
+.trust-links .prayer-shortcut{background:linear-gradient(120deg,rgba(50,165,225,.13),rgba(61,218,182,.18));border-color:rgba(87,221,202,.45)}
+@media(max-width:850px){.prayer-times-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.prayer-offset-fields{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.prayer-location-controls{grid-template-columns:1fr 1fr}.prayer-location-controls button{grid-column:1/-1}.prayer-feature-grid{gap:7px}.prayer-next-card{padding:12px;gap:7px}.prayer-next-card .prayer-name{font-size:17px}.prayer-next-card .prayer-counter{font-size:clamp(21px,6vw,30px);letter-spacing:0}.prayer-next-card .prayer-at{font-size:11px}.prayer-times-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.prayer-tile{padding:11px 6px}.prayer-sun-row>div{flex-direction:column;align-items:flex-start}.prayer-offset-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.prayer-search button{flex:0 0 auto}.prayer-bottom{display:grid;grid-template-columns:1fr}.prayer-method-control{width:100%}}
+@media(max-width:355px){.prayer-feature-grid{grid-template-columns:1fr}.prayer-times-grid{grid-template-columns:1fr 1fr}.prayer-next-card .prayer-counter{font-size:30px}.trust-links{grid-template-columns:1fr}}

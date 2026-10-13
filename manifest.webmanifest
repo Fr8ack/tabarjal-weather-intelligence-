@@ -1,0 +1,45 @@
+{
+  "name": "طقس طبرجل الذكي",
+  "short_name": "طقس طبرجل",
+  "description": "الطقس والرادار ومواقيت الصلاة والقرآن والفصول والطوالع وGPS في السعودية",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#071726",
+  "background_color": "#071726",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "الرادار",
+      "url": "/#maps"
+    },
+    {
+      "name": "مواقيت الصلاة",
+      "url": "/#prayer"
+    },
+    {
+      "name": "الطوالع",
+      "url": "/#tawale"
+    },
+    {
+      "name": "الرواتب",
+      "url": "/#payments"
+    }
+  ]
+}
